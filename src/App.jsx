@@ -1,17 +1,18 @@
-import React from 'react';
-import Sidebar from './components/Sidebar';
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
+  const [language, setLanguage] = useState("ita");
+
   return (
     <div className="container-fluid">
-      <div className="row vh-100 vw-100">
-        {/* Sidebar 30% della larghezza */}
-        <div className="col-md-3 d-flex flex-column sidebar">
-          <Sidebar />
+      <div className="row vh-100">
+        <div className="col-md-3">
+          <Sidebar language={language} onLanguageChange={setLanguage} />
         </div>
 
-        {/* Contenuto principale 70% della larghezza */}
-        <div className="col-md-9 content bg-light">
+        <div className="col-md-9 content bg-light p-4">
           <h1>Benvenuto!</h1>
           <p>Questa è l'area principale del contenuto.</p>
         </div>
