@@ -1,0 +1,18 @@
+{
+    "frameworks": [
+      "React.js",
+      "Bootstrap",
+      "Tailwind CSS"
+    ],
+    "tools": [
+      "GitHub",
+      "VS Code",
+      "StackBlitz",
+      "Figma"
+    ],
+    "cms": [
+      "WordPress",
+      "Shopify"
+    ]
+  }
+  
