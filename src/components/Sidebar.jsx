@@ -49,21 +49,21 @@ const Sidebar = ({ language, onLanguageChange }) => {
         <button className="btn btn-primary text-white w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#bio">
           📖 Bio
         </button>
-        <div className="collapse" id="bio">
+        <div className="collapse text-center" id="bio">
           <p className="small">{personalInfo.bio}</p>
         </div>
 
         <button className="btn btn-primary text-white w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#hobby">
           🎮 Hobby
         </button>
-        <div className="collapse" id="hobby">
+        <div className="collapse text-center" id="hobby">
           <p className="small">{personalInfo.hobby}</p>
         </div>
 
         <button className="btn btn-primary text-white w-100 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#goals">
           🎯 {language === "ita" ? "Obiettivi" : "Objectives"} 
         </button>
-        <div className="collapse" id="goals">
+        <div className="collapse text-center" id="goals">
           <p className="small">{personalInfo.goals}</p>
         </div>
       </div>
@@ -76,6 +76,7 @@ const Sidebar = ({ language, onLanguageChange }) => {
         >
           🌍 {language === "ita" ? "Traduci in Inglese" : "Translate in italian"}
         </button>
+        
       </div>
     </aside>
   );
