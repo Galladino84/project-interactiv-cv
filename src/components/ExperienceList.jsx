@@ -30,7 +30,7 @@ const ExperienceList = ({ language }) => {
           {experiences.map((exp, index) => (
             <li key={index} className="list-group-item">
               <h5 className="mb-1">{exp.role} - {exp.company}</h5>
-              <p className="text-muted">{exp.years}</p>
+              <p className="text-muted">{exp.period}</p>
               <p>{exp.description}</p>
             </li>
           ))}
