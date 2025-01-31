@@ -1,0 +1,17 @@
+{
+    "education": [
+      {
+        "title": "Certificazioni in Prompt Engineering e Content Creation basata su IA",
+        "school": "Corsi avanzati e specializzazioni in ambito AI",
+        "year": "In corso",
+        "description": "Studio di ChatGPT, OpenAI API, Generative AI e Machine Learning con focus sull'applicazione pratica dell'Intelligenza Artificiale nel settore dei contenuti digitali."
+      },
+      {
+        "title": "Perito Industriale Capotecnico in Chimica Tintoria",
+        "school": "ITIS Cipriano Facchinetti, Busto Arsizio (VA)",
+        "year": "1998 - 2004",
+        "description": "Formazione tecnica in chimica industriale con specializzazione nella tintoria e nei processi di lavorazione dei tessuti."
+      }
+    ]
+  }
+  
