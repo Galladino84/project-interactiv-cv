@@ -27,6 +27,14 @@ const ExperienceTabs = ({ language, activeTab, setActiveTab }) => {
           {language === "ita" ? "Tecnologie Utilizzate" : "Technologies Used"}
         </button>
       </li>
+      <li className="nav-item">
+        <button
+          className={`nav-link ${activeTab === "education" ? "active" : ""}`}
+          onClick={() => setActiveTab("education")}
+        >
+          {language === "ita" ? "Formazione" : "Education"}
+        </button>
+      </li>
     </ul>
   );
 };
