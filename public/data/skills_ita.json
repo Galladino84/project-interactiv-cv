@@ -1,5 +1,13 @@
 {
-    "hardSkills": ["JavaScript", "React", "Bootstrap", "WordPress"],
-    "softSkills": ["Problem Solving", "Teamwork", "Creatività"]
-  }
-  
+  "hardSkills": [
+      "JavaScript",
+      "React",
+      "Bootstrap",
+      "WordPress"
+  ],
+  "softSkills": [
+      "Problem Solving",
+      "Lavoro di squadra",
+      "Creatività"
+  ]
+}
