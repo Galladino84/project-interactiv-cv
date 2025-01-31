@@ -21,7 +21,7 @@ const TechnologyInfo = ({ language }) => {
 
 return (
   <div className="p-4">
-      <h3 className="text-lg font-bold">🛠️ Tecnologie usate</h3>
+      <h3 className="text-lg font-bold">🛠️ {language === "ita" ? "Tecnologie usate" : "Used Technology"}</h3>
       <ul className="list-group">
           {techData.length > 0 ? (
               techData.map((tech, index) => (
