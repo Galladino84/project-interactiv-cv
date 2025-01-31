@@ -4,7 +4,7 @@ const TechnologyInfo = ({ language }) => {
   const [techData, setTechData] = useState([]);
 
   useEffect(() => {
-    fetch(`/data/technology_${language}.json`)
+    fetch(`${import.meta.env.BASE_URL}/data/technology_${language}.json`)
         .then(res => {
             if (!res.ok) {
                 throw new Error(`HTTP error! Status: ${res.status}`);

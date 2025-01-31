@@ -6,7 +6,7 @@ const Sidebar = ({ language, onLanguageChange }) => {
 
   // Carica i dati JSON in base alla lingua selezionata
   useEffect(() => {
-    fetch(`/data/personal_info_${language}.json`)
+    fetch(`${import.meta.env.BASE_URL}/data/personal_info_${language}.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -25,13 +25,14 @@ const Sidebar = ({ language, onLanguageChange }) => {
     <aside className="d-flex flex-column bg-primary align-items-center text-white p-3 vh-100">
       {/* Foto Profilo */}
       <div className="text-center mb-3">
-        <img
-          src={personalInfo.profileImage || "/vite.svg"}
-          alt="Foto Profilo"
-          className="rounded-circle"
-          width="100"
-          height="100"
-        />
+      <img
+  src={`${import.meta.env.BASE_URL}${personalInfo.profileImage}` || `${import.meta.env.BASE_URL}vite.svg`}
+  alt="Foto Profilo"
+  className="rounded-circle"
+  width="100"
+  height="100"
+/>
+
       </div>
 
       {/* Nome e Posizione */}

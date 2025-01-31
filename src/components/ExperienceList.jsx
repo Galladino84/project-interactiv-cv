@@ -6,7 +6,7 @@ const ExperienceList = ({ language }) => {
   const [selectedExperience, setSelectedExperience] = useState(null); // Esperienza selezionata
 
   useEffect(() => {
-    const filePath = `/data/experiences_${language}.json`;
+    const filePath = `${import.meta.env.BASE_URL}/data/experiences_${language}.json`;
     
     fetch(filePath)
       .then((res) => {

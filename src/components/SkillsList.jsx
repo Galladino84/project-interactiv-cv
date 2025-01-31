@@ -4,7 +4,7 @@ const SkillsList = ({ language }) => {
   const [skills, setSkills] = useState({ hardSkills: [], softSkills: [] });
 
   useEffect(() => {
-    const url = `/data/skills_${language}.json`;
+    const url = `${import.meta.env.BASE_URL}/data/skills_${language}.json`;
 
     fetch(url)
       .then((res) => {
