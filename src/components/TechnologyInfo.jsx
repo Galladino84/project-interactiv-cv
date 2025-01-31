@@ -1,25 +1,39 @@
 import React, { useState, useEffect } from "react";
 
-const TechnologyInfo = () => {
+const TechnologyInfo = ({ language }) => {
   const [techData, setTechData] = useState([]);
 
   useEffect(() => {
-    fetch("/data/technology_ita.json")
-      .then((res) => res.json())
-      .then((data) => setTechData(data))
-      .catch((err) => console.error("Errore nel caricamento:", err));
-  }, []);
+    fetch(`/data/technology_${language}.json`)
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then(data => {
+            console.log("Dati ricevuti:", data);
+            setTechData(data.technologies);
+        })
+        .catch(err => console.error("Errore nel caricamento JSON:", err));
+}, [language]);
 
-  return (
-    <div>
-      <h3>Tecnologie Utilizzate</h3>
+
+return (
+  <div className="p-4">
+      <h3 className="text-lg font-bold">🛠️ Tecnologie usate</h3>
       <ul className="list-group">
-        {techData.map((tech, index) => (
-          <li key={index} className="list-group-item">{tech}</li>
-        ))}
+          {techData.length > 0 ? (
+              techData.map((tech, index) => (
+                  <li key={index} className="list-group-item">{tech}</li>
+              ))
+          ) : (
+              <li className="list-group-item text-muted">❌ Nessuna tecnologia trovata</li>
+          )}
       </ul>
-    </div>
-  );
+  </div>
+);
+
 };
 
 export default TechnologyInfo;

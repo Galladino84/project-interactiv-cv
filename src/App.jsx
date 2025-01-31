@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import ExperienceTabs from "./components/ExperienceTabs";
 import ExperienceList from "./components/ExperienceList";
 import SkillsList from "./components/SkillsList";
+import TechnologyInfo from "./components/TechnologyInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -23,9 +24,8 @@ const App = () => {
 
           {activeTab === "experience" && <ExperienceList language={language} />}
           {activeTab === "skills" && <SkillsList language={language} />}
-          {activeTab === "technology" && (
-            <h1>{language === "ita" ? "Tecnologie Utilizzate" : "Technologies Used"}</h1>
-          )}
+          {activeTab === "technology" && <TechnologyInfo language={language} />}
+
         </div>
       </div>
     </div>
