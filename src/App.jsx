@@ -4,6 +4,7 @@ import ExperienceTabs from "./components/ExperienceTabs";
 import ExperienceList from "./components/ExperienceList";
 import SkillsList from "./components/SkillsList";
 import TechnologyInfo from "./components/TechnologyInfo";
+import EducationList from "./components/EducationList";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
       {activeTab === "experience" && <ExperienceList language={language} />}
       {activeTab === "skills" && <SkillsList language={language} />}
       {activeTab === "technology" && <TechnologyInfo language={language} />}
+      {activeTab === "education" && <EducationList language={language} />}
     </div>
   </div>
 </div>
