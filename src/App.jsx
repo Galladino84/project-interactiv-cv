@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
+import ExperienceTabs from "./components/ExperienceTabs";
+import ExperienceList from "./components/ExperienceList";
+import SkillsList from "./components/SkillsList";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [language, setLanguage] = useState("ita");
+  const [activeTab, setActiveTab] = useState("experience");
 
   return (
-    <div className="container-fluid h-100">
-  <div className="row h-100">
-    <div className="col-md-3 d-flex flex-column">
-      <Sidebar language={language} onLanguageChange={setLanguage} />
-    </div>
+    <div className="container-fluid">
+      <div className="row vh-100">
+        {/* Sidebar */}
+        <div className="col-md-3">
+          <Sidebar language={language} onLanguageChange={setLanguage} />
+        </div>
 
-    <div className="col-md-9 d-flex align-items-center justify-content-center bg-light p-5">
-      <div>
-        <h1 className="fw-bold">Benvenuto!</h1>
-        <p className="lead">Questa è l'area principale del contenuto.</p>
+        {/* Contenuto principale */}
+        <div className="col-md-9 content bg-light p-4">
+          <ExperienceTabs language={language} activeTab={activeTab} setActiveTab={setActiveTab} />
+
+          {activeTab === "experience" && <ExperienceList language={language} />}
+          {activeTab === "skills" && <SkillsList language={language} />}
+          {activeTab === "technology" && (
+            <h1>{language === "ita" ? "Tecnologie Utilizzate" : "Technologies Used"}</h1>
+          )}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
   );
 };
 
