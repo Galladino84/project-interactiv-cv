@@ -11,24 +11,20 @@ const App = () => {
   const [activeTab, setActiveTab] = useState("experience");
 
   return (
-    <div className="container-fluid">
-      <div className="row vh-100">
-        {/* Sidebar */}
-        <div className="col-md-3">
-          <Sidebar language={language} onLanguageChange={setLanguage} />
-        </div>
-
-        {/* Contenuto principale */}
-        <div className="col-md-9 content bg-light p-4">
-          <ExperienceTabs language={language} activeTab={activeTab} setActiveTab={setActiveTab} />
-
-          {activeTab === "experience" && <ExperienceList language={language} />}
-          {activeTab === "skills" && <SkillsList language={language} />}
-          {activeTab === "technology" && <TechnologyInfo language={language} />}
-
-        </div>
-      </div>
+    <div className="container-fluid vh-100 overflow-auto">
+  <div className="row vh-100">
+    <div className="col-md-3 col-12">
+      <Sidebar language={language} onLanguageChange={setLanguage} />
     </div>
+    <div className="col-md-9 col-12 content bg-light p-4">
+      <ExperienceTabs language={language} activeTab={activeTab} setActiveTab={setActiveTab} />
+      {activeTab === "experience" && <ExperienceList language={language} />}
+      {activeTab === "skills" && <SkillsList language={language} />}
+      {activeTab === "technology" && <TechnologyInfo language={language} />}
+    </div>
+  </div>
+</div>
+
   );
 };
 
