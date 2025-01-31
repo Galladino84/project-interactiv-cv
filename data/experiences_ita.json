@@ -1,0 +1,16 @@
+[
+  {
+    "company": "Euronics Dimo",
+    "role": "Addetto Vendita",
+    "period": "2015 - Presente",
+    "description": "Gestione vendite e assistenza clienti per prodotti informatici ed elettronici.",
+    "more": "Responsabile delle vendite nel settore informatico, gestione ordini e assistenza post-vendita. Supporto nella formazione di nuovi dipendenti."
+  },
+  {
+    "company": "MotorK",
+    "role": "WordPress Developer",
+    "period": "2013 - 2015",
+    "description": "Sviluppo di temi WordPress per il settore automotive, gestione DEM e manutenzione di siti web aziendali.",
+    "more": "Creazione e manutenzione di siti web aziendali su piattaforma WordPress, ottimizzazione SEO, gestione di campagne di email marketing (DEM)."
+  }
+]
